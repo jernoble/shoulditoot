@@ -1,3 +1,18 @@
+@media (max-width: 41em) {
+	#answer {
+		font-size: 5vmin;
+	}
+}
+@media (min-width: 41em) {
+	#answer {
+		font-size: 2em;
+	}
+}
+@supports (container-type: inline-size) {
+	#answer {
+		font-size: 5cqw;
+	}
+}
 html {
 	height: 100%;
 	width: 100%;
@@ -31,10 +46,13 @@ body {
 	font-family: sans-serif;
 }
 #magic-8-ball {
+	container: magic-8-ball / size;
 	position: relative;
 	margin: auto;
-	width: 600px;
-	height: 600px;
+	aspect-ratio: 1 / 1;
+	width: calc(100% - 1em);
+	max-width: 40em;
+	max-height: 40em;
 	border-radius: 50%;
 	background-color: rgb(25, 25, 25);
 	background-image: linear-gradient(125deg, rgba(250, 250, 250, 0.5), transparent 100%);
@@ -75,8 +93,8 @@ body {
 }
 
 #polyhedron {
-	width: 75%;
-	height: 65%;
+	width: 86.6%;
+	height: 75%;
 	top: 10%;
 	background-image: url(triangle.svg);
 	background-size: 100% 100%;
@@ -117,7 +135,6 @@ body {
 }
 
 #answer {
-	font-size: 1.5em;
 	font-weight: bold;
 	font-variant: small-caps;
 	font-family: sans-serif;
