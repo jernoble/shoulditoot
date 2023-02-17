@@ -10,7 +10,7 @@
 }
 @supports (container-type: inline-size) {
 	#answer {
-		font-size: 5cqw;
+		font-size: 4.5cqw;
 	}
 }
 html {
